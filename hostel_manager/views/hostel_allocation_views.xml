@@ -1,0 +1,40 @@
+<odoo>
+    <record id="view_hostel_allocation_tree" model="ir.ui.view">
+        <field name="name">hostel.allocation.tree</field>
+        <field name="model">hostel.allocation</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="student_id"/>
+                <field name="room_id"/>
+                <field name="check_in_date"/>
+                <field name="check_out_date"/>
+                <field name="total_days"/>
+                <field name="total_price"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_hostel_allocation_form" model="ir.ui.view">
+        <field name="name">hostel.allocation.form</field>
+        <field name="model">hostel.allocation</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="student_id"/>
+                        <field name="room_id"/>
+                        <field name="check_in_date"/>
+                        <field name="check_out_date"/>
+                        <field name="total_days"/>
+                        <field name="total_price"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+ <record id="action_hostel_allocation" model="ir.actions.act_window">
+    <field name="name">Room Allocations</field>
+    <field name="res_model">hostel.allocation</field>
+    <field name="view_mode">list,form</field>
+</record>
+</odoo>
