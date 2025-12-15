@@ -58,4 +58,5 @@ class SaleOrderLine(models.Model):
          'CHECK(product_uom_qty > 0)',
          'Quantity must be greater than zero!')
     ]
-# <nnnnnnnn>
+
+
